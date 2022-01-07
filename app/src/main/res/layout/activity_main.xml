@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue_shade_1"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="255dp"
+        android:layout_height="195dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="48dp"
+        android:src="@drawable/scanner_icon" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:id="@+id/idLLButtons"
+        android:orientation="vertical"
+        android:layout_margin="18dp" >
+
+        <Button
+            android:id="@+id/idBtnSnap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_back"
+            app:backgroundTint="@color/light_blue"
+            android:gravity="center"
+            android:text="Snap"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/idBtnResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_back"
+            app:backgroundTint="@color/light_blue"
+            android:gravity="center"
+            android:text="Get Search Results"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/idPBLoading"
+    android:layout_marginBottom="50dp"
+    android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVSearchResults"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:layout_below="@id/idLLButtons"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="87dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="154dp"
+
+        android:layout_marginLeft="140dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginRight="148dp"
+        android:layout_marginBottom="-2dp"
+        android:text="About US" />
+
+
+</RelativeLayout>
